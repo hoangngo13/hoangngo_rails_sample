@@ -1,7 +1,7 @@
-class StaticPagesController < ApplicationController
-    def home
-    end
-  
-    def help
-    end
+class ApplicationController < ActionController::Base
+  protect_from_forgery with: :exception
+
+  def hello
+    render html: "hello, world!"
   end
+end
